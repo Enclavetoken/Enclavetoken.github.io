@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enclave</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+   body {
+   font-family: Share Tech Mono;
+    font-size: 16px;
+    color: white;
+    margin: 5px;
+    background-color: #80471C;
+    
+  }
+    .roadmap {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      white-space: nowrap;
+    }
+    .phase {
+      margin-right: 20px;
+      min-width: 300px; /* Adjust as needed */
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .task {
+      margin-left: 20px;
+       text-align: left;
+      font-weight: bold;
+    }
+    a {
+  text-decoration: none;
+  color: #ff9900;
+  cursor: none;
+    }
+    h1{
+     text-align: left;
+     font-size: 25px;
+     color: orange;
+    }
+    h2{
+     text-align: center;
+     font-size: 30px;
+     color: red;
+    }
+    h3{
+     text-align: left;
+     font-size: 16px;
+     color: white;
+     margin: 10px;
+    }
+    h4{
+     text-align: center;
+     font-size: 20px;
+     color: white;
+    }
+  h5{
+    font-family: Share Tech Mono;
+     text-align: center;
+     font-size: 30px;
+     color: white;
+     margin-left: 5px;
+    }
+   h6{
+     text-align: center;
+     font-size: 25px;
+     color: white;
+     margin-bottom: 5px;
+     margin-top: 5px;
+    }
+    h7{
+    font-family: Reggae One;
+     text-align: center;
+     font-size: 30px;
+     color: #37FD12;
+     margin-left: 5px;
+    }
+   p{
+     text-align: left;
+     font-size: 15px;
+     color: white;
+    }
+   .p2{
+     text-align: left;
+     font-size: 15px;
+     color: white;
+     margin-left: 12px;
+    }
+    #home {
+     text-align: center;
+     }
+   section {
+    background: linear-gradient(93.51deg, #2B1700 2.84%, #410200 99.18%);
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  #my-section {
+    
+    padding: 10px;
+    border-radius: 0px;
+    border: none;
+    margin-top: 0;
+    margin: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+.navbar .hamburgerlogowrap {
+  display: flex;
+  align-items: center;
+  
+}
+.navbar .hamburger {
+  display: none;
+  color: #D7D7D7;
+  background-color: #1F1D2B;
+  border: none;
+  margin-right: 10px;
+}
+.navbar .createbtn {
+  background-color: transparent;
+  border: none;
+  width: 126px;
+  height: 45px;
+  color: #BCBCBC;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+.navbar .createbtn.selectedbtn {
+  border: 1px solid #D7D7D7;
+  border-radius: 10px;
+}
+.navbar .navlogo {
+  height: 100%;
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+}
+.navbar .navlink {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #BCBCBC;
+}
+.navbar .navlink.selectedlink {
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1.5px solid #9B51E0;
+}
+.navbar .navlink:not(:last-child) {
+  margin-right: 32px;
+}
+.top-nav {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #043927;
+  height: 30px;
+  padding: 1em;
+z-index: 999; /* set a high z-index value */
+}
+.logo-container img {
+  width: 45px;
+  height: 45px;
+cursor: none;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h2 {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #37FD12;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #354A21;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+.image-style {
+  animation: floating 3s ease-in-out infinite;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center; /* Center text if needed */
+}
+
+.image-style img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  max-height: 100%; /* Ensure the image doesn't exceed its container */
+  object-fit: contain; /* Adjust the object-fit property as per your needs */
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.image-style {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+@keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.pogi-criptotradeir {
+font-family: Arial,Sans-Serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+ .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+    .social-icons img {
+      height: 50px;
+      width: auto;
+      margin: 0 2px;
+      border: solid red;
+      border-radius: 50px;
+    }
+    .social-icons a {
+      filter: brightness(100%);
+      transition: all 0.2s ease-in-out;
+    }
+    .social-icons a:hover {
+      filter: brightness(150%);
+      transform: scale(1.1);
+    }
+    .social-icons a:hover img {
+      filter: invert(100%) brightness(100%);
+    }
+  .button {
+    border: 2px solid #6C5DD3; /* add border to button */
+    padding: 0px; /* add padding to button */
+    border-radius: 40px; /* add border radius to button */
+    filter: brightness(100%);
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+  }
+
+  .button:hover {
+    filter: brightness(150%);
+    transform: scale(1.1);
+  }
+
+  .button:hover img {
+    filter: invert(100%) brightness(100%);
+  }
+  .footer-main {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .footer-navigate {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-navigate .nav {
+    margin-left: 20px;
+  }
+  .footer-navigate .nav h5 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .footer-navigate .nav p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+.footer-main {
+  max-width: 40%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.footer-navigate {
+  display: flex;
+}
+.footer-navigate .nav {
+  margin-left: 60px;
+}
+.footer-navigate .nav h5 {
+  margin: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.footer-navigate .nav p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  color: #D7D7D7;
+}
+
+.footer2 p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 36px;
+  color: #828282;
+}
+.partners {
+    display: inline-block;
+    position: relative;
+    margin: -10px;
+}
+
+.partners a {
+    display: block;
+}
+
+.partners img {
+    width: 150px;
+    height: auto;
+}
+
+.partners .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.partners:hover .overlay {
+    opacity: 1;
+}
+a {
+    color: #37FD12;
+  }
+  .glow-border {
+    border: 1px solid #6C5DD3;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #000000, 0 0 50px #3a005e, 0 0 50px #000000;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e, 0 0 2px #3a005e;
+    }
+    to {
+      box-shadow: 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3, 0 0 2px #6C5DD3;
+    }
+  }
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-up.slide-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.landingpage {
+  margin: 0 auto;
+  padding: 0 5px;
+  position: relative;
+  max-width: 1100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #4A3728;
+}
+.image-container {
+  text-align: center;
+  justify-content: center;
+}
+
+.image-container .image-wrapper {
+  
+  padding: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+
+  border: 2px solid #354A21;
+  border-radius: 0 30px 0 30px;
+  background-color: silver;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-container img {
+    max-width: 100%;
+  }
+}
+
+
+#top-navbar {
+  background: linear-gradient(45deg, #2B1700, #410200);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border: none;
+  
+}
+
+#top-navbar .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #37FD12;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+#top-navbar .btn:hover {
+  transform: scale(1.1); /* Adjust the scale factor as desired */
+}
+
+    #top-navbar .btn i {
+      margin-left: 2px;
+    }
+
+    #hamburger-navbar {
+      background: linear-gradient(to right, #1F1D2B, black);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+
+    #hamburger-navbar img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    #hamburger-navbar .hamburger-menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      background: linear-gradient(to right, #1F1D2B, black);
+      padding: 10px;
+    }
+
+    #hamburger-navbar .hamburger-menu a {
+      display: block;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 767px) {
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      img {
+        width: 50%;
+      }
+    }
+
+.slide-from-left {
+  opacity: 0; /* Initially hide the element */
+  transform: translateX(-100px); /* Initially position the element outside the viewport */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Add transition for smooth effect */
+}
+
+
+    /* CSS for the roadmap container */
+    .roadmaps {
+      position: relative;
+      width: 100%;
+      max-width: 800px; /* Adjust the width as per your needs */
+      margin: 0 auto;
+      padding: 40px 20px;
+      height: 600px; /* Set a fixed height for the roadmap container */
+      overflow-y: scroll; /* Add vertical scrollbar to the roadmap container */
+    }
+
+/* CSS for the road line */
+.roadmap-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px; /* Adjust the left position as per your needs */
+  width: 2px;
+  background-color: #80471C; /* Set the color of the road line to red */
+  animation: moveLine 14s infinite; /* Adjust the animation duration as per your needs */
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+  .roadmap-line {
+    left: 190px; /* Set the left position to 190px on desktop */
+  }
+}
+
+    /* CSS for the circle on the road line */
+    .roadmap-circle {
+      position: absolute;
+      top: 0;
+      left: -5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #C7EA46; /* Set the color of the circle to red */
+      transform: translateY(-50%);
+    }
+
+    /* CSS for the road plans */
+    .roadmap-phase {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 60px; /* Adjust the padding as per your needs */
+    }
+
+/* CSS for the scrolling section */
+.scrolling-section {
+  max-height: 200px; /* Adjust the max-height as per your needs */
+  padding-right: 20px; /* Add padding to avoid content overlapping with scrollbar */
+  background-color: #80471C; /* Add a gray background color to the content box */
+  border-radius: 0 35px 0 30px;
+  overflow-y: scroll; /* Add vertical scrollbar to the scrolling section */
+  margin-right: 40px;
+}
+
+/* Media query for mobile */
+@media (max-width: 767px) {
+  .scrolling-section {
+    border: 1px solid #65350F; /* Add a border to the scrolling section */
+    width: 87%; /* Set the width to 100% of the viewport */
+    margin-right: 0px; /* Remove the right margin */
+  }
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+  .scrolling-section {
+    border: 1px solid red; /* Add a border to the scrolling section */
+    width: 40%; /* Set the width to 40% of the viewport */
+    margin-right: 20px; /* Add the right margin for desktop */
+    margin-left: 200px;
+  }
+}
+
+    /* CSS animation for the road line */
+    @keyframes moveLine {
+      0% {
+        top: 0;
+      }
+      20% {
+        top: 0;
+      }
+      35% {
+        top: 100px;
+      }
+      50% {
+        top: 240px;
+      }
+      65% {
+        top: 380px;
+      }
+      80% {
+        top: 520px;
+      }
+      100% {
+        top: 660px;
+      }
+    }
+#roadmapz {
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+}
+#home {
+  text-align: center;
+}
+#about {
+  text-align: none;
+}
+#token {
+  text-align: none;
+}
+
+#loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #362312;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    #loading img {
+      width: 100px; /* Adjust the size as needed */
+      height: auto;
+    }
+
+.slide-exit-animation {
+  transition: transform 0.5s ease-out; /* Customize the duration and easing as needed */
+}
+
+.slide-exit-animation.slide-exit {
+  transform: translateX(-100%); /* Customize the direction and distance of the slide exit */
+}
+
+.slide-exit-animation {
+  transition: transform 0.5s ease-out; /* Customize the duration and easing as needed */
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-container {
+  position: relative;
+  margin-bottom: 10px; /* Adjust the spacing between the logo and the loading bar as needed */
+}
+
+#logo {
+  width: 100px; /* Adjust the size of the logo image as needed */
+  height: 100px;
+}
+/* Define the bouncing animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Apply the animation to the logo */
+        #logo {
+            animation: bounce 1s infinite;
+        }
+
+
+#loading-bar {
+  width: 0;
+  height: 10px; /* Adjust the height of the loading bar as needed */
+  background-color: green; /* Customize the color of the loading bar */
+  animation: loading-animation 20s linear infinite; /* Customize the animation duration and timing as needed */
+}
+
+@keyframes loading-animation {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 30%;
+  }
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.image-container {
+  flex: 1 0 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.text-container {
+  flex: 1 0 100%;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    order: 2;
+    flex: 0 0 50%;
+  }
+
+  .text-container {
+    order: 1;
+    flex: 0 0 50%;
+  }
+
+  .cube {
+    right: 0; /* Position on the right side on desktop */
+  }
+}
+
+@media (max-width: 767px) {
+  .cube {
+    left: 0; /* Position on the left side on mobile */
+  }
+}
+
+.cube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #410200;
+  animation: moveCube 15s infinite linear;
+  z-index: 1;
+}
+
+@keyframes moveCube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/*DITO ANG CUBE ANIMATION 2*/
+
+.image-container2 .image-wrapper2 {
+  
+  padding: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.image-container2 img {
+  max-width: 100%;
+  height: auto;
+  background-color: silver;
+  text-align: center;
+  margin-bottom: 1px;
+  margin-top: 0;
+}
+
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Add this line to center the content horizontally */
+  align-items: center; /* Add this line to center the content vertically */
+  position: relative;
+}
+
+.image-container2 {
+  flex: 1 0 100%;
+  position: relative;
+  z-index: 2;
+  border: 2px;
+}
+
+.text-container2 {
+  flex: 1 0 100%;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .image-container2 {
+    order: 2;
+    flex: 0 0 70%;
+  }
+
+  .text-container2 {
+    order: 1;
+    flex: 0 0 50%;
+  }
+}
+
+
+    @media (max-width: 767px) {
+      .cube2 {
+        left: 0; /* Position on the left side on mobile */
+        right: auto; /* Reset right position */
+        transform: translateX(0); /* Reset horizontal translation */
+      }
+    }
+
+    @media (min-width: 768px) {
+      .cube2 {
+        left: 50%; /* Position in the center on desktop */
+        right: auto; /* Reset right position */
+        transform: translateX(-50%); /* Center horizontally */
+      }
+    }
+
+    .cube2 {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: #410200;
+      animation: moveCube 23s infinite linear;
+      z-index: 1;
+    }
+
+    @keyframes moveCube {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+/*BUY BUTTON NI LUPI*/
+.button-ni-lupi {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #043927;
+  border: 2px solid #37FD12;
+  color: #37FD12;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  margin-top: 0;
+  margin-left: 10px;
+  border-radius: 0 30px 5px 20px;
+  cursor: none;
+}
+
+.button-ni-lupi:hover {
+  transform: scale(1.1);
+  color: white;
+  border-color: white;
+}
+
+.chart-ni-lupi {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid red;
+  color: red;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  border-radius: 30px 5px 20px 0;
+}
+
+.chart-ni-lupi:hover {
+  transform: scale(1.1);
+  color: white;
+  border-color: white;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*END*/
+
+/*DITO ANG TOKENNOMICS CSS*/
+
+.container-tokenomics {
+      display: inline-block;
+      text-align: center;
+      justify-content: center;
+    }
+     .logo-token {
+      width: 100px;
+     }
+    .title-token {
+      font-weight: none;
+      color: red;
+      font-weight: bold;
+    }
+   .group-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .group {
+      flex: 1 0 50%;
+    }
+    .description {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .p-token{
+     text-align: center;
+     font-size: 15px;
+     color: white;
+     margin-top: 1px;
+    }
+    .p-token2{
+     text-align: center;
+     font-size: 15px;
+     color: orange;
+     margin-top: 5px;
+     
+    }
+/*END*/
+.btn-square i {
+            border: 1px solid #37FD12;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+/*  DITO ANG CSS NG QUESTION AND ASWER QUESTION */
+
+  .faq {
+    display: flex;
+    flex-direction: column;
+    border: 2px;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Common styles */
+.question {
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  position: relative;
+  color: #9A7B4F;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .question {
+    width: 300px;
+    margin: auto;
+    
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .question {
+    width: 600px;
+    margin: auto;
+    border: 2px solid #997950; /* Neon green border for desktop */
+  }
+}
+
+  .question:hover {
+    background-color: #3F301D;
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out;
+    opacity: 0;
+    background-color: transparent;
+    color: #AC9362;;
+    font-size: 15px;
+  }
+
+  .question.open .answer {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 1.5s ease-in;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+    color: orange;
+  }
+
+  .question.open .arrow {
+    transform: rotate(180deg);
+  }
+
+/* END */
+
+/* PIECHART CSS */
+.containerpiechart {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0;
+        }
+  canvas {
+            
+   margin: 5px; /* Add margin of 5px to all sides */
+  max-width: calc(100% - 10px);
+ max-height: calc(100% - 40px); /* Subtract the margin and h5 height */
+  width: auto;
+  height: auto;
+        }
+  .color-box {
+  display: inline-block;
+   width: 10px;
+   height: 10px;
+   margin-right: 5px;
+        }
+
+/* END  */
+
+/*START NG IMAGE BACKGROUND */
+#myDiv {
+  background-image: url("Constellation.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 20px; 
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+}
+/* END */
+
+#myDiv2 {
+  background-image: url("roadmap.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 20px; 
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+}
+/* END */
+
+
+/*START NG PLAIN BCKGROUND CSS */
+#divbg {
+  background-color: #362312;
+ padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 20px; 
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+}
+#divbg2 {
+  background-color: #362312;
+ padding-top: 20px; /* Adjust the top padding as needed */
+  padding-bottom: 20px; 
+  border-radius: 15px;
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
+}
+
+#divbg3 {
+  background-color: #362312;
+ padding-top: 5px; /* Adjust the top padding as needed */
+  padding-bottom: 5px; 
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  height: auto; /* Adjust the height as needed */
+
+/* START NG NEON BUTTON CSS */
+.neon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.neon-container a {
+  background-color: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px; /* Add some vertical spacing between the buttons */
+  transition: all 0.3s;
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.neon:hover {
+  background-color: transparent;
+  border-color: #ffffff;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+/* END */
+
+
+  .hidden-text {
+    display: none;
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+<div id="loading" class="slide-exit-animation">
+  <div id="logo-container">
+    <img src="enclavelogo.png" alt="Your Logo" id="logo">
+  </div>
+  <div id="loading-bar"></div>
+</div>
+
+
+  
+  
+ <div id="home"></div>
+  <h1></h1>
+<section id="my-section" class="top-navbar">
+<div id="top-navbar">
+  <div class="btn btn-square rounded-circle me-1" onclick="handleDiscordClick()">
+    <i class="fab fa-discord"></i>
+  </div>
+  <div class="btn btn-square rounded-circle me-1" onclick="handleTelegramClick()">
+    <i class="fab fa-telegram"></i>
+  </div>
+  <div class="btn btn-square rounded-circle me-1" onclick="handleTwitterClick()">
+    <i class="fab fa-twitter"></i>
+  </div>
+</div>
+</section>
+<section id="my-section" class="top-nav">
+  <div>
+    <div class="logo-container">
+     <a href="#home"> <img src="enclavelogo.png" alt="Your Logo"></a>
+      <h7>Enclave</h7>
+    </div>
+  </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
+  </label>
+  <ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#home" onclick="myFunction()">Litepaper</a></li>
+    <li><a href="#token">Token</a></li>
+    <li><a href="#roadmapz">Roadmap</a></li>
+    <li><a href="#about" onclick="myFunction()">About</a></li>
+  </ul>
+</section>
+<h1>🔻</h1>
+<h1></h1>
+<h1></h1>
+
+<div class="landingpage">
+<h1></h1>
+
+<!-- Display the countdown timer in an element -->
+<div id="divbg3">
+<div class="container2">
+  <div class="image-container2">
+    <div class="image-wrapper2">
+      <img src="seedsale.gif" width="100%" height="auto" class="slide-up">
+    </div>
+  </div>
+  </div>
+<h5 style="background-color: #362312;border: solid #37FD12; width: 300px; justify-content: center; margin-right: auto; margin-left: auto; font-size: 35px; color: #37FD12; border-radius: 40px 40px 0 0;margin-bottom: 1px; margin-top:5px;">SEED SALE ONGOING!</h5>
+<h5 id="myclock" style="background-color: #362312;border: solid #37FD12; width: 300px; justify-content: center; margin-right: auto; margin-left: auto; font-size: 35px; color: #37FD12; border-radius: 0 0 40px 40px;margin-bottom: 1px; margin-top:5px;"></h5>
+
+
+
+<p>To purchase $ENC during the ongoing seed sale, please follow these instructions:</p>
+
+<p><a id="show-more-link" href="#" onclick="toggleHiddenInstructions(); return false;">Show more</a></p>
+
+<ol class="hidden-text">
+  <li>Initiate an Over the Counter (OTC) transaction.</li>
+  <li>Use one of the following methods to contact us:
+    <ul>
+      <li>Send us a direct message (DM) on Telegram.</li>
+      <li>Or reach out to us via email using the provided buttons below.</li>
+    </ul>
+  </li>
+  <li>Provide us with the necessary details for the transaction, including the amount of $ENC you wish to purchase.</li>
+  <li>Await further instructions and confirmation from our team.</li>
+  <li>Once the transaction is approved, complete the payment according to the provided instructions.</li>
+  <li>After the payment is received, we will transfer the corresponding amount of $ENC to your designated wallet.</li>
+</ol>
+
+<p id="hidden-instructions" class="hidden-text">Please note that the availability of $ENC and the seed sale terms may be subject to change. Ensure you stay updated with the latest information provided by our official channels.</p>
+
+<script>
+  function toggleHiddenInstructions() {
+    var hiddenInstructions = document.getElementsByClassName("hidden-text");
+    var showMoreLink = document.getElementById("show-more-link");
+
+    for (var i = 0; i < hiddenInstructions.length; i++) {
+      if (hiddenInstructions[i].style.display === "none") {
+        hiddenInstructions[i].style.display = "block";
+        showMoreLink.textContent = "Show less";
+      } else {
+        hiddenInstructions[i].style.display = "none";
+        showMoreLink.textContent = "Show more";
+      }
+    }
+  }
+</script>
+
+
+
+<div class="neon-container">
+  <a href="https://t.me/Project_Satoshi" class="neon">Telegram</a>
+ <a href="mailto:enclave.citadel01@gmail.com" class="neon">Email Us</a>
+
+</div>
+</div>
+
+
+<!-- END  -->
+
+ <div id="divbg2">
+<div class="container">
+<div class="image-container">
+  <div class="image-wrapper">
+    <video src="video.mp4" width="100%" height="auto" autoplay controls controlsList="nodownload" class="slide-up"></video>
+  </div>
+</div>
+
+ 
+  <div class="text-container">
+    <h1></h1>
+    <h5 class="slide-up">Experience the groundbreaking ENCLAVE project, revolutionizing the market with tokenized real land assets, securing their value through tangible properties.</h5>
+  </div>
+  <div class="cube"></div>
+</div>
+
+
+<!--BUTTONS NG BUY AT CHART NI LUPI-->
+<div class="button-container">
+<a href="#" class="button-ni-lupi" onclick="chartLupi()">Chart</a>
+</div>
+<div class="button-container">
+<a href="#" class="button-ni-lupi" onclick="buyLupi()">Buy ENC</a>
+</div>
+<div class="button-container">
+<a href="#" class="button-ni-lupi" onclick="buyLupi()">Add to Metamask</a>
+</div>
+  <script src="script.js"></script>
+</div>
+<!--END NG BUTTONS NI LUPI-->
+
+  <section id="home" class="slide-up">
+  <h6>WHAT IS ENCLAVE?</h6>
+
+  <div class="roadmap">
+    <div class="phase">
+      <h2 class="title">Decentralized</h2>
+      <ul>
+        <li class="task">ENC is for everyone! </li>
+        <li class="task">ENC's value is back by real asset! </li>
+        <li class="task"> Coin with only 21 Million supply</li>
+        <li class="task">Contract is Renounced. </li>
+        <li class="task">LP is burned forever</li>
+        <li class="task">7% Tax </li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2 class="title">Security</h2>
+      <ul>
+        <li class="task">Launch on BSC</li>
+        <li class="task">Immutable Contract</li>
+        <li class="task">No trust issue</li>
+        <li class="task">Transparent</li>
+      </ul>
+    </div>
+
+    <div class="phase">
+      <h2 class="title">Team Details</h2>
+      <ul>
+        <li class="task">Team is anonymous</li>
+        <li class="task">Don't need to trust the team!</li>
+        <li class="task">ENC's code will never lie!</li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+<h1></h1>
+<h1></h1>
+
+<p class="slide-up">
+  ENC Token is the native token of ENCLAVE, a project that boasts real land assets as its backing. With 5 hectares of land supporting its value, ENC Token provides investors with a tangible asset foundation. With a maximum supply of 21 million tokens, ENC Token ensures scarcity and potential value appreciation.
+</p>
+<p class="slide-up">
+  What sets ENC Token apart is its unique pricing structure based on square meters (sqm) of land. This innovative approach allows for a direct correlation between the token value and the underlying land asset. As the starting price of ENC is established, investors can monitor and track the value of their holdings based on changes in the real estate market.
+</p>
+
+<p class="slide-up">
+While this description provides a brief overview, a more comprehensive understanding of ENCLAVE and the intricate details of the ENC Token system will be available in the forthcoming <a href="/litepaper">litepaper</a>. Stay tuned for further information that will delve into the specifics of this exciting project.</p>
+
+
+<div id="myDiv">
+<!-- DITO ANG TOKENOMICS -->
+<div id="token"></div>
+  <div class="container-tokenomics">
+    <h5 class="slide-up">ENC Token</h5>
+    <div class="slide-up">
+    <p class="p-token">ENC Token aims to be a highly traded cryptocurrency in the future. Its main purpose is to tokenize real land assets, backed by 5 hectares of land. With a limited supply of 21 million tokens, ENC Token offers stability and potential growth in the digital asset space, bridging traditional real estate markets with the world of cryptocurrencies.</p></div>
+    <div class="image-style">
+    <img class="logo-token" src="enclavelogo.png" alt="LUPI Logo"></div>
+
+    <div class="group-container">
+      <div class="group">
+        <div class="title-token">Chain</div>
+        <div class="description">BSC</div>
+      </div>
+      <div class="group">
+        <div class="title-token">Token</div>
+         <div class="description">ENC</div>
+      </div>
+      <div class="group">
+        <div class="title-token">Tax</div>
+        <div class="description">7%</div>
+      </div>
+      <div class="group">
+        <div class="title-token">SUPPLY</div>
+        <div class="description">21,000,000</div>
+      </div>
+      <div class="group">
+        <div class="title-token">Lquidity</div>
+        <div class="description">Burned LP Tokens</div>
+      </div>
+      <div class="group">
+        <div class="title-token">Contract</div>
+        <div class="description">Renounced</div>
+      </div>
+    </div>
+    <p></p>
+    <p class="p-token2" style="font-weight: bold;">420 ENC = 1 Square metre</p>
+    <p class="p-token2" style="font-weight: bold;">Public Price: 1 ENC = $0.045</p>
+    <p></p>
+    <p></p>
+    <p class="p-token2">Contract Address: COMING SOON</p>
+  </div>
+<!-- END -->
+   <h5 class="slide-up">Token Allocation</h5>
+   <div class="slide-up">
+    <div class="containerpiechart">
+        <canvas width="200" height="200"></canvas>
+        <div id="details"></div>
+    </div></div>
+<h5 class="slide-up">Latest News</h5>
+
+<div class="twitter-feed-container" style="height: 440px; width: 100%; overflow: auto; margin-left: auto; margin-right: auto;">
+  <div class="sk-ww-twitter-feed" data-embed-id="165968"></div>
+</div>
+<script src="https://widgets.sociablekit.com/twitter-feed/widget.js" async defer></script>
+</div>
+
+
+<h1></h1>
+
+
+
+
+
+<div id="about"></div>
+<h5 class="slide-up">About ENC</h5>
+<p class="slide-up">
+Discover the innovative world of ENCLAVE, a project initiated by Project Satoshi that leverages real land assets to back its intrinsic value.</p>
+<p class="slide-up">
+Through the ownership of ENC tokens, participants gain a proportional share in the land, granting them the opportunity to construct their dream homes.</p>
+<p class="slide-up">
+The primary objective of ENC is to tokenize the real land assets owned by creators, seamlessly integrating physical properties into the realm of NFT collectibles.</p>
+<p class="slide-up">
+ENCLAVE is an immutable and decentralized base token, operates with a singular focus on implementing a tax on every buy and sell transaction.</p>
+<p class="slide-up">
+While its features are minimalistic, its underlying value is anchored by real land assets. </p>
+<p class="slide-up">
+Our forthcoming <a href="/litepaper">
+litepaper</a> will provide comprehensive details about the land-backed value proposition of ENCLAVE.  </p>
+<p class="slide-up">
+Stay tuned for a transparent and enlightening exploration of our project, where the fusion of a simple yet effective token model and tangible land assets redefine the possibilities of value preservation.</p>
+
+
+<h5 class="slide-up">About Team</h5>
+<p class="slide-up">ENCLAVE is a community-driven and decentralized token, operated by an anonymous team.</p>
+<p class="slide-up">
+We believe that the true power lies in the collective efforts of our community, making the identity of the creators irrelevant.</p>
+<p class="slide-up">
+To ensure transparency and trust, the contract has been renounced, and the LP Tokens will be burned forever.</p>
+<p class="slide-up">
+While our team remains dedicated to managing and supporting ENC, our ultimate goal is to achieve remarkable success through widespread adoption and make our dream a reality.</p>
+<p class="slide-up">
+In the world of crypto,You don't have to trust developers and creators instead trust yourself and embrace decentralization and transparency. ENC values individual decision-making and the core principles of the industry.
+</p>
+<div class="text-align center">
+      <img src="https://raw.githubusercontent.com/Onchainsperm/onchain/main/shpvf0bke008rvno1kvpto8bhi-75cfd99eb8ecaef8a24ac82e744dbca3.png" width="100%" height="auto" class="image-style">
+</div>
+<div id="roadmapz"></div>
+<div id="myDiv2">
+<div class="slideFromLeft">
+  <h5 class="slide-up">Our Roadmap</h5>
+  <div class="roadmaps">
+    <div class="roadmap-line">
+      <div class="roadmap-circle"></div>
+    </div>
+    <div class="roadmap-phase">
+      <h3>Phase 1</h3>
+      <div class="scrolling-section">
+        <p class="p2">Creating Social Media (✔️)</p>
+        <p class="p2">Seed Sale</p>
+        <p class="p2">Presale</p>
+        <p class="p2">Community Building</p>
+        <p class="p2">Launch ENC Token</p>
+      </div>
+    </div>
+    <div class="roadmap-phase">
+      <h3>Phase 2</h3>
+      <div class="scrolling-section">
+        <p class="p2">Marketing</p>
+        <p class="p2">10,000 Followers on Twitter</p>
+        <p class="p2">10,000 Members on Telegram</p>
+        <p class="p2">10,000 Members on Discord</p>
+      </div>
+    </div>
+    <div class="roadmap-phase">
+      <h3>Phase 3</h3>
+      <div class="scrolling-section">
+        <p class="p2">Collaboration and Partnership</p>
+        <p class="p2">Mass Adoption</p>
+        <p class="p2">Staking and Utilities</p>
+      </div>
+    </div>
+    <div class="roadmap-phase">
+      <h3>Phase 4</h3>
+      <div class="scrolling-section">
+        <p class="p2">CEX Listings</p>
+        <p class="p2">Land Tokenization</p>
+        <p class="p2">NFTs and NFT Staking</p>
+        <p class="p2">Expansion to other chains</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="divbg">
+<h5>FAQ</h5>
+<div class="faq">
+  <div class="question" onclick="toggleAnswer(1)">
+    <span class="arrow">&#9660;</span>
+    What is ENC and what does   
+    it represent?
+    <div class="answer">ENC is a cryptocurrency backed by real land assets, representing a decentralized and immutable tokenization of real estate.</div>
+  </div>
+  <div class="question" onclick="toggleAnswer(2)">
+    <span class="arrow">&#9660;</span>
+    Can LUPI be used for any specific purposes or utilities?
+    <div class="answer">Yes, ENC is specifically used within the ENCLAVE ecosystem.</div>
+  </div>
+  <div class="question" onclick="toggleAnswer(3)">
+    <span class="arrow">&#9660;</span>
+How does LUPI differentiate itself from other meme coins?
+    <div class="answer">ENC differentiates itself from other coins by being fully decentralized, immutable, and backed by real land assets.</div>
+  </div>
+  <div class="question" onclick="toggleAnswer(4)">
+    <span class="arrow">&#9660;</span>
+    What is the significance of the wolf and platinum combination in LUPI's concept?
+    <div class="answer">The significance of land tokenization and digital assets in ENC's concept is that it allows for the representation of real land assets in a digital form. This enables increased transparency, security, and efficiency in real estate transactions, as well as the potential for fractional ownership and liquidity of land assets.</div>
+  </div>
+  <div class="question" onclick="toggleAnswer(5)">
+    <span class="arrow">&#9660;</span>
+    Who created ENC?
+    <div class="answer">ENC was created and founded by a group of private individuals who are crypto enthusiasts.</div>
+  </div>
+</div>
+</div>
+<h1></h1>
+<h1 class="slide-up">⚠️</h1>
+<h1 class="slide-up">Cryptocurrency may be unregulated in your jurisdiction.</h1>
+<h1 class="slide-up">
+The value of cryptocurrencies may go down as well as up.</h1>
+<h1 class="slide-up">
+Profits may be subject to capital gains or other taxes applicable in your jurisdiction.</h1>
+	<h5 class="slide-up">Automated Smart Contract Audit
+	</h5>
+<div style="text-align:center;">
+<div class="partners">
+    <a href="https://www.cyberscope.io">
+        <img src="https://raw.githubusercontent.com/onchain123/onchain/main/cyberscope.jpg" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+</div>
+
+	<h5>Echosystem
+	</h5>
+<div style="text-align:center;">
+<div class="partners">
+    <a href="./">
+        <img src="https://raw.githubusercontent.com/onchain123/onchain/main/2560px-Binance_logo.svg.png" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+<p>
+  
+</p>
+<div class="partners">
+    <a href="./">
+        <img src="https://raw.githubusercontent.com/Onchainsperm/onchain/main/logo.png" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+<p>
+</p>
+<div class="partners">
+    <a href="./">
+        <img src="Uniswaplogo.png" alt="your image description" class="glow-border">
+        <div class="overlay">
+        </div>
+    </a>
+</div>
+</div>
+<div style="text-align:center;">
+<div class="social-icons">
+  
+  <a class="btn btn-square rounded-circle me-1" href="https://twitter.com/21Citadels?t=6HOwQ1Ni7iPI8lEgIcWYlA&s=09"><i class="fab fa-twitter"></i></a>
+
+   <a class="btn btn-square rounded-circle me-1" href="./"><i class="fab fa-discord"></i></a>
+   <a class="btn btn-square rounded-circle me-1" href="https://t.me/EnclaveByProjectSatoshi"><i class="fab fa-telegram"></i></a></a>
+</div>
+</div>
+
+<h1></h1>
+</div>
+
+
+    <!--   START NG JAVA SCRIPT DITO   -->
+
+
+<!-- DITO ANG CLOCK COUBTDIWN TIMER -->
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 12, 2023 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("myclock").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("myclock").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+
+<!--  DITO ANG PIECHART JAVA SCRIPT  -->
+    <script>
+        let ctx = document.querySelector("canvas").getContext("2d");
+
+        const results = [
+            {mood: "Liquidity Pool", total: 33, shade: "green"},
+            {mood: "Marketing and Partnership", total: 15, shade: "orange"},
+            {mood: "Seed Sale", total: 20, shade: "yellow"},
+            {mood: "Presale", total: 25, shade: "pink"},
+            {mood: "Legal and Regulatory Compliance", total: 7, shade: "maroon"},
+        ];
+
+        let sum = 0;
+        let totalNumberOfPeople = results.reduce((sum, {total}) => sum + total, 0);
+        let currentAngle = 0;
+
+        for (let moodValue of results) {
+            // calculating the angle the slice (portion) will take in the chart
+            let portionAngle = (moodValue.total / totalNumberOfPeople) * 2 * Math.PI;
+
+            // drawing an arc and a line to the center to differentiate the slice from the rest
+            ctx.beginPath();
+            ctx.arc(100, 100, 100, currentAngle, currentAngle + portionAngle);
+            currentAngle += portionAngle;
+            ctx.lineTo(100, 100);
+
+            // adding a black border to the slice
+            ctx.strokeStyle = "";
+            ctx.lineWidth = 0;
+            ctx.stroke();
+
+            // filling the slices with the corresponding mood's color
+            ctx.fillStyle = moodValue.shade;
+            ctx.fill();
+
+            // displaying the percentage value on the chart
+            let percentage = ((moodValue.total / totalNumberOfPeople) * 100).toFixed(1) + "%";
+            let labelAngle = currentAngle - portionAngle / 2;
+            let labelX = Math.cos(labelAngle) * 80 + 100;
+            let labelY = Math.sin(labelAngle) * 80 + 100;
+
+            ctx.fillStyle = "black";
+            ctx.font = "bold 12px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(percentage, labelX, labelY);
+        }
+
+        // Adding details below the pie chart
+        let details = document.getElementById("details");
+        for (let moodValue of results) {
+            let percentage = ((moodValue.total / totalNumberOfPeople) * 100).toFixed(1);
+            let colorBox = `<div class="color-box" style="background-color: ${moodValue.shade}"></div>`;
+            let text = `${colorBox}${percentage}% ${moodValue.mood} <br>`;
+            details.innerHTML += text;
+        }
+    </script>
+
+<!--  END -->
+
+
+<!-- DITO ANG JS NG QUESTION ND ANSWER SECTION -->
+<script>
+  function toggleAnswer(questionNumber) {
+    const question = document.querySelector(`.faq .question:nth-child(${questionNumber})`);
+    question.classList.toggle("open");
+  }
+</script>
+
+<!-- END -->
+
+<!--DITO SIMULA NG BUY BUTTON NI LUPI-->
+<script>
+function buyLupi() {
+  // BISAYA LANG SAKALAM MGA LODI
+  
+  window.location.href = "#home";
+}
+function chartLupi() {
+  // BISAYA LANG SAKALAM MGA LODI
+  
+  window.location.href = "#home";
+}
+</script>
+
+<!--END-->
+
+<script>
+    setTimeout(function() {
+  var loadingElement = document.getElementById('loading');
+  loadingElement.classList.add('slide-exit');
+  
+  setTimeout(function() {
+    loadingElement.style.display = 'none';
+  }, 500); // Wait for the animation duration before hiding the element (adjust the delay if needed)
+}, 6000);
+
+  </script>
+
+
+<script>
+function slideFromLeft(element) {
+  const elementPosition = element.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (elementPosition < screenHeight) {
+    element.style.opacity = 1;
+    element.style.transform = "translateX(0)";
+  }
+}
+
+window.addEventListener("scroll", function() {
+  const element = document.querySelector(".slide-from-left");
+  slideFromLeft(element);
+});
+
+</script>
+
+
+<script>
+  function handleTwitterClick() {
+    window.location.href = "https://twitter.com/21Citadels?t=6HOwQ1Ni7iPI8lEgIcWYlA&s=09";
+  }
+
+
+  function handleDiscordClick() {
+    window.location.href = "./";
+  }
+
+  function handleTelegramClick() {
+    window.location.href = "https://t.me/EnclaveByProjectSatoshi";
+  }
+  
+</script>
+
+
+
+  <script>
+    function handleLogoClick() {
+      // Handle logo click event
+      // Redirect or perform desired action
+      window.location.href = "./";
+    }
+
+    function handleHamburgerClick() {
+      // Handle hamburger click event
+      // Toggle menu or perform desired action
+      var menu = document.querySelector('.menu-items');
+      menu.style.transform = menu.style.transform === 'translateX(0)' ? 'translateX(-150%)' : 'translateX(0)';
+    }
+  </script>
+
+
+  <script>
+    function toggleHamburgerMenu() {
+      var menu = document.getElementById('hamburgerMenu');
+      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+
+    window.addEventListener('scroll', function() {
+      var content = document.getElementById('content');
+      var distanceFromTop = window.pageYOffset || document.documentElement.scrollTop;
+      content.style.transform = 'translateY(' + distanceFromTop + 'px)';
+    });
+  </script>
+
+<script>
+function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  // Check if the element is within the viewport vertically and horizontally
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= windowHeight &&
+    rect.right <= windowWidth
+  );
+}
+
+function addSlideUpAnimation() {
+  var sectionElements = document.getElementsByClassName('slide-up');
+  for (var i = 0; i < sectionElements.length; i++) {
+    var sectionElement = sectionElements[i];
+    if (isElementInViewport(sectionElement)) {
+      sectionElement.classList.add('slide-up-active');
+    }
+  }
+}
+
+// Trigger the slide-up animation on page load
+document.addEventListener('DOMContentLoaded', function() {
+  addSlideUpAnimation();
+});
+
+// Trigger the slide-up animation on scroll
+window.addEventListener('scroll', function() {
+  addSlideUpAnimation();
+});
+
+// Trigger the slide-up animation on window resize
+window.addEventListener('resize', function() {
+  addSlideUpAnimation();
+});
+</script>
+
+  <script>
+    const roadmap = document.querySelector('.roadmap');
+    roadmap.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      roadmap.scrollLeft += e.deltaY;
+    });
+  </script>
+  <script src="script.js"></script> 
+  <script>
+const slides = document.querySelectorAll(".slides img");
+let currentIndex = 0;
+
+function showSlides() {
+  slides[currentIndex].classList.add("slide-hidden");
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides[currentIndex].classList.remove("slide-hidden");
+}
+
+setInterval(showSlides, 1000); // Change image every 3 seconds (adjust as needed)
+
+  </script>
+<div style="display: flex; justify-content: center;">
+  <p style="font-size: 8px;" class="pogi-criptotradeir">⚠️DISCLAIMER: Enclave(ENC) is not a financial institution nor investment.Enclave is a decentralized token owned by the community and run by the community..
+  Investing in crypto is very highrisk which can lead to losses. invest at your own risk! </p>
+  </div>
+<div style="display: flex; justify-content: center;">
+  <p style="font-size: 8px;" class="pogi-criptotradeir">&copy; 2023 Enclave. All rights reserved.</p>
+  </div>
+  
+<!-- DITO AND FLOAGING SUPPORT SA BOTTOM RIGHTSIDE NG PAGE  -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 998;">
+  <div style="display: flex; align-items: center;">
+    <div id="notificationContainer" style="width: 180px; padding: 10px; background-color: white; border: 2px solid black; border-radius: 20px 0 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <p id="notificationText" style="margin: 0; color: black;">Email us for business inquiries and support.</p>
+        <button onclick="closeNotification()" style="background: none; border: none; font-size: 20px; cursor: none; color: black;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div>
+      <a href="mailto:enclave.citadel01@gmail.com">
+        <button style="width: 60px; height: 60px; border-radius: 50%; background-color: #7F6244; color: white; font-size: 20px;">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function closeNotification() {
+    var notificationContainer = document.getElementById("notificationContainer");
+    notificationContainer.style.display = "none";
+  }
+</script>
+<!--END NG FLOATING BUTTON-->
+
+</body>
+</html>
